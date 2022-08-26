@@ -21,7 +21,28 @@
 // ATENÇÃO!! Faça um commit para cada item do exercício.
 
 function PedirDados(){
-    nome = prompt("Insira o seu nome")
-    salario = parseFloat(prompt("Insira o seu salário"))
+    var nome = prompt("Insira o seu nome")
+    var salario = parseFloat(prompt("Insira o seu salário"))
+    console.log(nome)
+    console.log(salario)
+    return salario;
 }
 
+
+function CalcularSalario(num){
+    if(num < 1501){
+        var salarioNovo = num * 1.20
+    }
+    else if(num > 1500 && num < 2001){
+        salarioNovo = num * 1.15
+    }
+    else if(num > 2000 && num < 3001){
+        salarioNovo = num * 1.10
+    }
+    else if(num > 3000){
+        salarioNovo = num * 1.10
+    }
+    console.log(salarioNovo)
+}
+
+CalcularSalario(PedirDados())
