@@ -10,16 +10,17 @@
 // 1000 * 1.15 = 1150
 // ATENÇÃO!! Faça um commit para cada item do exercício.
 
-function PedirDados(){
+function PedirNome(){
     var nome = prompt("Insira o seu nome")
+    return nome;
+}
+
+function PedirSalario(){
     var salario = parseFloat(prompt("Insira o seu salário"))
-    console.log(nome)
-    console.log(salario)
     return salario;
 }
 
-
-function CalcularSalario(num){
+function CalcularSalario(name,num){
     if(num < 1501){
         var porcentagem = 1.20
         var salarioNovo = num * porcentagem 
@@ -36,8 +37,8 @@ function CalcularSalario(num){
         porcentagem = 1.05
         salarioNovo = num * porcentagem
     }
-    console.log(salarioNovo)
-    return salarioNovo;
+    
+    console.log("Nome: " +name+ " \nSalário atual: " +num+ " \nPorcentagem do aumento: " +porcentagem+ "\nSalário reajustado: " +salarioNovo)
 }
 
-CalcularSalario(PedirDados())
+CalcularSalario(PedirNome(),PedirSalario())
