@@ -1,15 +1,6 @@
-// 3. Depois de calcular o aumento você deve exibir: o nome do
-// colaborador, o salário, a % de aumento e o salário reajustado.
 // 4. Crie uma função que pergunte se o usuário deseja calcular
 // novamente com novas informações.
-// Para calcular o aumento, faça o valor do salário multiplicado pela
-// porcentagem em decimal.
-// Ex.: salário R$1.000,00 aumento de 10%
-// 1000 * 1.10 = 1100
-// salário R$1.000,00 aumento de 15%
-// 1000 * 1.15 = 1150
 // ATENÇÃO!! Faça um commit para cada item do exercício.
-
 function PedirNome(){
     var nome = prompt("Insira o seu nome")
     return nome;
@@ -41,4 +32,16 @@ function CalcularSalario(name,num){
     console.log("Nome: " +name+ " \nSalário atual: " +num+ " \nPorcentagem do aumento: " +porcentagem+ "\nSalário reajustado: " +salarioNovo)
 }
 
-CalcularSalario(PedirNome(),PedirSalario())
+repetir = true
+while(repetir == true){
+    CalcularSalario(PedirNome(),PedirSalario())
+    parar = prompt("O que deseja fazer? \n1 - Repetir programa \n2 - Encerrar programa")
+    while(parar < 1 || parar > 2){
+        parar = prompt("Insira uma opção válida: \n1 - Repetir programa \n2 - Encerrar programa")
+    }
+    if(parar == 1){
+        repetir = true
+    }else if(parar == 2){
+        repetir = false
+    }
+}
