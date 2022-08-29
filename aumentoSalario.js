@@ -1,6 +1,3 @@
-// 4. Crie uma função que pergunte se o usuário deseja calcular
-// novamente com novas informações.
-// ATENÇÃO!! Faça um commit para cada item do exercício.
 function PedirNome(){
     var nome = prompt("Insira o seu nome")
     return nome;
@@ -45,3 +42,4 @@ while(repetir == true){
         repetir = false
     }
 }
+
