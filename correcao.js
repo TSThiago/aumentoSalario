@@ -1,12 +1,22 @@
 var nome = 0
 var salario = 0
 var porcentagem = 0
+continuar = true
 
+while(continuar){
 PedirDados()
 CalcularSalario(salario,DefinirPorcentagem())
 console.log("Nome: " +nome+ "\nSalário: " +salario+ "\nPorcentagem do aumento: " +porcentagem+ "%\nSalário reajustado: " +CalcularSalario(salario,DefinirPorcentagem()))
+Parar()
+}
 
-
+function Parar(){
+    parar = prompt("Aperte 1 se quiser parar o programa.")
+    if(parar == 1){
+        continuar = false
+    }
+    console.log("Programa encerrado.")
+}
 
 function PedirDados(){
     nome = prompt("Insira o seu nome")
